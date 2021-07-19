@@ -17,6 +17,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  username: postgres
+  password: 3175abah
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -82,5 +84,5 @@ test:
 production:
   <<: *default
   database: micro_reddit_production
-  username: micro_reddit
+  username: postgres
   password: <%= ENV['MICRO_REDDIT_DATABASE_PASSWORD'] %>
